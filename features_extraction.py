@@ -5,7 +5,7 @@ import dlib
 from keras.preprocessing.image import array_to_img, img_to_array, load_img
 import numpy as np
 import math
-
+import pandas as pd
 
 def people(filename, detector, predictor):
     image = cv2.imread(filename)
@@ -218,12 +218,22 @@ class Feature_Extractor_Scoring():
     def Extractor(self):
         self.detector = dlib.get_frontal_face_detector()
         self.predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
-        features = np.zeros((len(self.list_files), N_FEATURES))
+        self.features = np.zeros((len(self.list_files), N_FEATURES))
         for i, filename in enumerate(self.list_files):
-            features[i, :] = feature_matrix(filename, self.predictor, self.detector, self.weight_head)
-        return features
+            self.features[i, :] = feature_matrix(filename,  self.detector, self.predictor, self.weight_head)
+        return self.features
 
 
-list_file =["/Users/estelleaflalo/Desktop/target0.JPG",  "/Users/estelleaflalo/Desktop/target1.JPG"]
-feat_class = Feature_Extractor_Scoring(list_file, 1)
-feat = feat_class.Extractor()
+    def save_to_df(self):
+        df = pd.DataFrame(self.features)
+        pic_id = []
+        for filename in self.list_files:
+            try:
+                temp = filename[::-1][:filename[::-1].find('/')][::-1]
+                pid = int(temp[:temp.find(".")])
+                pic_id.append(pid)
+            except:
+                pic_id.append(0)
+        df = df.assign(picture_id=pic_id)
+        df.to_csv("./df_scoring.csv")
+        return 'ok'
