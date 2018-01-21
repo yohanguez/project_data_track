@@ -16,10 +16,8 @@ class Scoring():
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, self.y, test_size=test_size, random_state=42)
         return self.X_train, self.X_test, self.y_train, self.y_test
 
-    def fit(self):
+    def fit_predict(self):
         self.model.fit(self.X_train, self.y_train)
-
-    def predict(self):
         self.pred = self.model.predict(self.X_test)
         return self.pred
 
@@ -28,45 +26,11 @@ class Scoring():
 
 
 
-
-wedding_pictures = glob.glob("/Users/estelleaflalo/Desktop/ITC/DataSciencesTrack/Project/huppa1/*.jpg")
-
-
-pic_id_test = []
-for filename in wedding_pictures:
-    temp = filename[::-1][:filename[::-1].find('/')][::-1]
-    pid = temp[:temp.find(".")]
-    pic_id_test.append(pid)
+# scoring on portraits
 
 
-
-WEIGHT_HEAD = 1
-N_FEATURES = 273
-TEST_SIZE = len(pic_id_test)
-features2 = np.zeros((TEST_SIZE, N_FEATURES))
-for i, filename in enumerate(wedding_pictures):
-    features2[i, :] = feature_matrix(filename, WEIGHT_HEAD)
-    if i%100==0:
-        print i
-
-features2 = preprocessing.scale(features2)
-pred_wedding = model.predict(features2)
-
-filename0 = "/Users/estelleaflalo/Desktop/target0.JPG"
-filename1 = "/Users/estelleaflalo/Desktop/target1.JPG"
-In [765]:
-
-X0 = feature_matrix(filename0, 1)
-X0 = preprocessing.scale(X0)
-​
-X1 = feature_matrix(filename1, 1)
-X1 = preprocessing.scale(X1)
-
-model.predict(X1)
-model.predict(X0)
+#predicting scores of wedding pictures
 
 
-best_pictures_sorted = [wedding_pictures[i] for i in np.argsort(pred_wedding)[::-1]]
-
-
+#
 

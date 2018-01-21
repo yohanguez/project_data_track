@@ -209,7 +209,7 @@ peop1= people(filename1)
 blurry2(im0)
 blurry2(im1)
 '''
-N_FEATURES = 20
+
 
 class Feature_Extractor_Scoring():
     def __init__(self, list_files, weight_head):
@@ -217,15 +217,19 @@ class Feature_Extractor_Scoring():
         self.list_files = list_files
 
     def Extractor(self):
+        self.N_FEATURES = 20
         self.detector = dlib.get_frontal_face_detector()
         self.predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
-        self.features = np.zeros((len(self.list_files), N_FEATURES))
+        self.features = np.zeros((len(self.list_files), self.N_FEATURES))
         for i, filename in enumerate(self.list_files):
             self.features[i, :] = feature_matrix(filename,  self.detector, self.predictor, self.weight_head)
+            if i%100==0:
+                print ("Processing " + str(float(i)/len(self.list_files)) + "%%")
+        self.features = preprocessing.scale(self.features)
         return self.features
 
 
-    def save_to_df(self):
+    def save_to_df(self, title):
         df = pd.DataFrame(self.features)
         pic_id = []
         for filename in self.list_files:
@@ -236,32 +240,32 @@ class Feature_Extractor_Scoring():
             except:
                 pic_id.append(0)
         df = df.assign(picture_id=pic_id)
-        df.to_csv("./data/df_features.csv")
-        return "df_portrait_features.csv contains features"
+        df.to_csv("../data/df_" + title + "_features.csv")
+        return "df of features ready"
 
 
-    def to_X_y(self, pathname_features, pathname_label):
-        # Aligning target and features
-        X_df = pd.read_csv(pathname_features, sep=',')
-        X_df[['picture_id']].astype(int)
-        X_df = X_df.sort_values('picture_id')
-        y_df = pd.read_csv(pathname_label, sep=';')
-        merge = pd.merge(X_df, y_df, how='inner', left_on='picture_id', right_on='ID')
-        y_df = merge["TARGET"]
-        temp = merge.copy()
-        temp = temp.drop(["TARGET", "picture_id", "Unnamed: 0", "ID"], axis=1)
-        X_df = temp
+def to_X_y(pathname_features, pathname_label):
+    # Aligning target and features
+    X_df = pd.read_csv(pathname_features, sep=',')
+    X_df[['picture_id']].astype(int)
+    X_df = X_df.sort_values('picture_id')
+    y_df = pd.read_csv(pathname_label, sep=';')
+    merge = pd.merge(X_df, y_df, how='inner', left_on='picture_id', right_on='ID')
+    y_df = merge["TARGET"]
+    temp = merge.copy()
+    temp = temp.drop(["TARGET", "picture_id", "Unnamed: 0", "ID"], axis=1)
+    X_df = temp
 
-        # Filling with 0 the NaN
-        X_df.fillna(0, inplace=True)
+    # Filling with 0 the NaN
+    X_df.fillna(0, inplace=True)
 
-        # Scaling the feature matrix
-        XX = X_df.copy()
-        XX = np.array(XX)
-        XX = preprocessing.scale(XX)
-        yy = y_df.copy()
+    # Scaling the feature matrix
+    XX = X_df.copy()
+    XX = np.array(XX)
+    XX = preprocessing.scale(XX)
+    yy = y_df.copy()
 
-        return XX, yy
+    return XX, yy
 
 
 

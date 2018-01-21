@@ -37,4 +37,4 @@ for original_pic in raw_pic_id:
         target[original_pic] = 0
 
 
-target.to_csv("./df_wedding_labels.csv")
+target.to_csv("./data/label_wedding.csv")
