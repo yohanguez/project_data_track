@@ -6,6 +6,7 @@ from keras.preprocessing.image import array_to_img, img_to_array, load_img
 import numpy as np
 import math
 import pandas as pd
+from sklearn import preprocessing
 
 def people(filename, detector, predictor):
     image = cv2.imread(filename)
@@ -235,5 +236,29 @@ class Feature_Extractor_Scoring():
             except:
                 pic_id.append(0)
         df = df.assign(picture_id=pic_id)
-        df.to_csv("./df_scoring.csv")
-        return 'ok'
+        df.to_csv("./data/df_features.csv")
+        return "df_portrait_features.csv contains features"
+
+
+    def to_X_y(self, pathname_features, pathname_label):
+        # Aligning target and features
+        X_df = pd.read_csv(pathname_features, sep=',')
+        X_df[['picture_id']].astype(int)
+        X_df = X_df.sort_values('picture_id')
+        y_df = pd.read_csv(pathname_label, sep=';')
+        merge = pd.merge(X_df, y_df, how='inner', left_on='picture_id', right_on='ID')
+        y_df = merge["TARGET"]
+        temp = merge.copy()
+        temp = temp.drop(["TARGET", "picture_id", "Unnamed: 0", "ID"], axis=1)
+        X_df = temp
+
+        # Filling with 0 the NaN
+        X_df.fillna(0, inplace=True)
+
+        # Scaling the feature matrix
+        XX = X_df.copy()
+        XX = np.array(XX)
+        XX = preprocessing.scale(XX)
+        yy = y_df.copy()
+
+        return XX, yy
