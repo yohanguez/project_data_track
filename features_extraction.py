@@ -158,7 +158,7 @@ def hsv_people(people_out, weight_head):
     return mean_list(h_m), mean_list(s_m), mean_list(v_m), mean_list(h_std), mean_list(s_std), mean_list(v_std)
 
 def feature_matrix(filename, detector, predictor, weight_head):
-        img = load_img(filename, detector, predictor)
+        img = load_img(filename)
         im = img_to_array(img)
         people_out = people(filename, detector, predictor)
 
@@ -213,12 +213,17 @@ N_FEATURES = 20
 class Feature_Extractor_Scoring():
     def __init__(self, list_files, weight_head):
         self.weight_head = weight_head
-        self.detector = dlib.get_frontal_face_detector()
-        sel f.predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
         self.list_files = list_files
 
     def Extractor(self):
+        self.detector = dlib.get_frontal_face_detector()
+        self.predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
         features = np.zeros((len(self.list_files), N_FEATURES))
         for i, filename in enumerate(self.list_files):
-            features[i, :] = feature_matrix(filename, self.weight_head)
+            features[i, :] = feature_matrix(filename, self.predictor, self.detector, self.weight_head)
         return features
+
+
+list_file =["/Users/estelleaflalo/Desktop/target0.JPG",  "/Users/estelleaflalo/Desktop/target1.JPG"]
+feat_class = Feature_Extractor_Scoring(list_file, 1)
+feat = feat_class.Extractor()
