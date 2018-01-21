@@ -44,7 +44,7 @@ for C in [0.1, 1, 10, 100]:
         print(C,penalty, clf.evaluate_portraits(y_test))
 
 
-for maxdep in [5, 10, 20]:
+for maxdep in [2, 5, 10, 20]:
     model = RandomForestRegressor(max_depth = maxdep)
     clf = Scoring(model)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
