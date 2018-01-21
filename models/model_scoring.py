@@ -1,5 +1,6 @@
 from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import train_test_split
+import numpy as np
+from scipy.stats import rankdata
 
 #pathname for the dataframe with 273 features for 1000 pictures
 pathname_feature = "/Users/estelleaflalo/Desktop/ITC/DataSciencesTrack/Project/df_1000.csv"
@@ -7,22 +8,26 @@ pathname_label = "/Users/estelleaflalo/Desktop/M2_Data_Science/First_Period/Mach
 
 
 class Scoring():
-    def __init__(self, X, y, model):
-        self.X = X
-        self.y = y
+    def __init__(self, model):
         self.model = model
 
     def split(self, test_size = 0.33):
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, self.y, test_size=test_size, random_state=42)
         return self.X_train, self.X_test, self.y_train, self.y_test
 
-    def fit_predict(self):
-        self.model.fit(self.X_train, self.y_train)
-        self.pred = self.model.predict(self.X_test)
+    def fit(self, X_train, y_train):
+        self.model.fit(X_train, y_train)
+
+    def predict(self, X_test):
+        self.pred = self.model.predict(X_test)
         return self.pred
 
-    def evaluate(self):
-        return mean_squared_error(self.test, self.pred)
+    def evaluate_portraits(self, y_test):
+        y_true_rank = rankdata(y_test)
+        y_pred_rank = rankdata(self.pred)
+        square_distance = np.dot((y_pred_rank - y_true_rank).T, (y_pred_rank - y_true_rank))
+        accuracy = 1 - 6 * square_distance / (y_pred_rank.shape[0] * (y_pred_rank.shape[0] ** 2 - 1))
+        return accuracy
 
 
 

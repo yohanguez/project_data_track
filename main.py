@@ -3,13 +3,15 @@ sys.path.insert(0, './models')
 from model_scoring import Scoring
 sys.path.insert(0, './features_and_labels')
 from features_extraction import to_X_y
-
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.svm import SVR
+from sklearn.linear_model import LogisticRegression
 
-pathname_portraits_features = "./data.df_portraits_features.csv"
-pathname_portaits_labels = "./label_portraits.csv"
-pathname_wedding_features = "./data.df_wedding_features.csv"
-pathname_wedding_labels = "./label_wedding.csv"
+pathname_portraits_features = "./data/df_portraits_features.csv"
+pathname_portaits_labels = "./data/label_portraits.csv"
+pathname_wedding_features = "./data/df_wedding_features.csv"
+pathname_wedding_labels = "./data/label_wedding.csv"
 
 
 ### define clusters
@@ -20,10 +22,32 @@ pathname_wedding_labels = "./label_wedding.csv"
 ### evaluate images on these clusters
 
 #1 - Train/test on portraits
-
+test_size = 0.3
 X, y = to_X_y(pathname_portraits_features, pathname_portaits_labels)
-model = SVR(C = 10)
-clf = Scoring(X, y, model)
-X_train, X_test, y_train, y_test = clf.split()
-clf.fit_predict()
-print(clf.evaluate())
+
+for C in [0.1, 1, 10, 100]:
+    model = SVR(C = C)
+    clf = Scoring(model)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+    clf.fit(X_train, y_train)
+    pred = clf.predict(X_test)
+    print(C, clf.evaluate_portraits(y_test))
+
+
+for C in [0.1, 1, 10, 100]:
+    for penalty in ['l1', 'l2']:
+        model = LogisticRegression(penalty = penalty, C = C, class_weight = 'balanced')
+        clf = Scoring(model)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+        clf.fit(X_train, y_train)
+        pred = clf.predict(X_test)
+        print(C,penalty, clf.evaluate_portraits(y_test))
+
+
+for maxdep in [5, 10, 20]:
+    model = RandomForestRegressor(max_depth = maxdep)
+    clf = Scoring(model)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+    clf.fit(X_train, y_train)
+    pred = clf.predict(X_test)
+    print(clf.evaluate_portraits(y_test))
