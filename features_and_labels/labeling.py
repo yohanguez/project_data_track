@@ -28,13 +28,13 @@ for folder1 in pic_kept_list_files:
                 pid = temp[:temp.find(".")]
                 pic_selected_id.append(pid)
 
-target = pd.DataFrame(index= raw_pic_id, columns = ["Kept"])
+target = pd.DataFrame(index= raw_pic_id, columns = ["ID", "TARGET"])
 
 for original_pic in raw_pic_id:
     if original_pic in pic_selected_id:
-        target[original_pic] =1
+        target[original_pic] =[original_pic, 1]
     else:
-        target[original_pic] = 0
+        target[original_pic] = [original_pic, 0]
 
 
 target.to_csv("./data/label_wedding.csv")

@@ -7,7 +7,7 @@ import numpy as np
 import math
 import pandas as pd
 from sklearn import preprocessing
-
+import sys
 def people(filename, detector, predictor):
     image = cv2.imread(filename)
     image = imutils.resize(image, width=500)
@@ -238,23 +238,26 @@ class Feature_Extractor_Scoring():
                 pid = int(temp[:temp.find(".")])
                 pic_id.append(pid)
             except:
-                pic_id.append(0)
+                try :
+                    pic_id.append(filename.split("/")[-1].split(".")[0])
+                except:
+                    pic_id.append(0)
         df = df.assign(picture_id=pic_id)
         df.to_csv("../data/df_" + title + "_features.csv")
-        return "df of features ready"
+        print("df of features ready")
+        return df
 
 
-def to_X_y(pathname_features, pathname_label):
+def merging(X_df, y_df):
     # Aligning target and features
-    X_df = pd.read_csv(pathname_features, sep=',')
-    X_df[['picture_id']].astype(int)
-    X_df = X_df.sort_values('picture_id')
-    y_df = pd.read_csv(pathname_label, sep=';')
     merge = pd.merge(X_df, y_df, how='inner', left_on='picture_id', right_on='ID')
+    return merge
+
+def to_X_y(merge):
     y_df = merge["TARGET"]
     temp = merge.copy()
-    temp = temp.drop(["TARGET", "picture_id", "Unnamed: 0", "ID"], axis=1)
-    X_df = temp
+    features = [str(i) for i in range(20)]
+    X_df = temp[features]
 
     # Filling with 0 the NaN
     X_df.fillna(0, inplace=True)
@@ -266,6 +269,7 @@ def to_X_y(pathname_features, pathname_label):
     yy = y_df.copy()
 
     return XX, yy
+
 
 
 
