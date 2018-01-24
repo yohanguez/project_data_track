@@ -14,40 +14,14 @@ pathname_wedding_features = "./data/df_wedding_features.csv"
 pathname_wedding_labels = "./data/label_wedding.csv"
 
 
-### define clusters
-
-#>>[paths_clust1, paths_clust2 ..]
-
-
-### evaluate images on these clusters
-
-#1 - Train/test on portraits
 test_size = 0.3
 X, y = to_X_y(pathname_portraits_features, pathname_portaits_labels)
 
-for C in [0.1, 1, 10, 100]:
-    model = SVR(C = C)
-    clf = Scoring(model)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
-    clf.fit(X_train, y_train)
-    pred = clf.predict(X_test)
-    print(C, clf.evaluate_portraits(y_test))
+model = RandomForestRegressor(max_depth=2)
+clf = Scoring(model)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+clf.fit(X, y)
 
 
-for C in [0.1, 1, 10, 100]:
-    for penalty in ['l1', 'l2']:
-        model = LogisticRegression(penalty = penalty, C = C, class_weight = 'balanced')
-        clf = Scoring(model)
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
-        clf.fit(X_train, y_train)
-        pred = clf.predict(X_test)
-        print(C,penalty, clf.evaluate_portraits(y_test))
-
-
-for maxdep in [2, 5, 10, 20]:
-    model = RandomForestRegressor(max_depth = maxdep)
-    clf = Scoring(model)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
-    clf.fit(X_train, y_train)
-    pred = clf.predict(X_test)
-    print(clf.evaluate_portraits(y_test))
+X, y = to_X_y(pathname_wedding_features, pathname_wedding_labels)
+clf.predict(X)
