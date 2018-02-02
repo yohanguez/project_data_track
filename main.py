@@ -10,14 +10,14 @@ from sklearn.linear_model import LogisticRegression
 import pandas as pd
 import numpy as np
 
-pathname_portraits_features = "./data/df_portraits_features.csv"
-pathname_portaits_labels = "./data/label_portraits.csv"
-pathname_wedding_features = "./data/df_wedding_features.csv"
-pathname_wedding_labels = "./data/label_wedding.csv"
+pathname_portraits_features = "./data/df_portraits_features.csv"#ok
+pathname_portaits_labels = "./data/label_portraits.csv" #ok
+pathname_wedding_features = "./data/df_wedding_features.csv" #to run
+pathname_wedding_labels = "./data/label_wedding.csv" #to run
 pathname_wedding_features_clusters = "./data/df_wedding_features_with_cluster.csv"
 
 test_size = 0.3
-PERCENTAGE_KEPT_PER_CLUSTER = 0.3
+PERCENTAGE_KEPT_PER_CLUSTER = 0.5
 
 X_df_portrait = pd.read_csv(pathname_portraits_features, sep =',')
 y_df_portrait = pd.read_csv(pathname_portaits_labels, sep=';')
@@ -47,3 +47,5 @@ y_df_wedding['PRED'] = y_df_wedding['ID'].isin(id_pic_kept)*1
 
 
 accuracy = np.abs(y_df_wedding['PRED']  - y_df_wedding['TARGET']).sum()/float(len(y_df_wedding))
+
+print("Our accuracy is about " + str(round(accuracy*100)) + "%")

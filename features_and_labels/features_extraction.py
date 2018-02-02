@@ -224,7 +224,7 @@ class Feature_Extractor_Scoring():
         for i, filename in enumerate(self.list_files):
             self.features[i, :] = feature_matrix(filename,  self.detector, self.predictor, self.weight_head)
             if i%100==0:
-                print ("Processing " + str(float(i)/len(self.list_files)) + "%%")
+                print ("Processing " + str(float(i)/len(self.list_files)) + "%")
         self.features = preprocessing.scale(self.features)
         return self.features
 

@@ -2,11 +2,12 @@ import sys
 sys.path.insert(0, './models')
 from model_scoring import Scoring
 sys.path.insert(0, './features_and_labels')
-from features_extraction import to_X_y
+from features_extraction import to_X_y, merging
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.svm import SVR
 from sklearn.linear_model import LogisticRegression
+import pandas as pd
 
 pathname_portraits_features = "./data/df_portraits_features.csv"
 pathname_portaits_labels = "./data/label_portraits.csv"
@@ -22,8 +23,11 @@ pathname_wedding_labels = "./data/label_wedding.csv"
 ### evaluate images on these clusters
 
 #1 - Train/test on portraits
+X_df_portrait = pd.read_csv(pathname_portraits_features, sep =',')
+y_df_portrait = pd.read_csv(pathname_portaits_labels, sep=';')
+merged = merging(X_df_portrait, y_df_portrait)
+X_portrait, y_portrait = to_X_y(merged)
 test_size = 0.3
-X, y = to_X_y(pathname_portraits_features, pathname_portaits_labels)
 
 for C in [0.1, 1, 10, 100]:
     model = SVR(C = C)
