@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def profile():
-    return(render_template("api/template.html"))
+    return(render_template("template.html"))
 
-if __name__=="__main_":
+if __name__=="__main__":
+    app.debug = True
     app.run()
