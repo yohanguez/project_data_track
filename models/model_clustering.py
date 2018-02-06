@@ -15,6 +15,7 @@ from shutil import copyfile
 
 class model_clustering():
     def __init__(self, p_features_list, p_pic_list):
+        print('TODO')
         pass
 
 
