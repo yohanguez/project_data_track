@@ -1,7 +1,288 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04158349-94c2-4a0f-9030-8768ffc465b4" name="Default" comment="" />
+    <list default="true" id="04158349-94c2-4a0f-9030-8768ffc465b4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/features_VGG16.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_1/0B8A4599.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_1/0B8A4600.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_1/0B8A4601.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_1/0B8A4602.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_1/0B8A4603.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_1/0B8A4604.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_10/8Y9A2331.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_10/8Y9A2332.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_10/8Y9A2333.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_12/0B8A5077.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_12/0B8A5078.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_12/0B8A5079.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_13/8Y9A2093.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_13/8Y9A2095.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_13/8Y9A2096.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_14/8O4A8525.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_14/8O4A8526.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_14/8O4A8527.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_14/8O4A8528.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_14/8O4A8529.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_15/8O4A8999.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_15/8O4A9000.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_15/8O4A9001.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_15/8O4A9003.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_15/8O4A9004.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_15/8O4A9016.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_15/8O4A9017.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_15/8O4A9018.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_16/0B8A4624.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_16/0B8A4626.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_16/0B8A4627.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_16/0B8A4628.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_16/0B8A4630.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_17/0B8A5050.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_17/0B8A5051.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_17/0B8A5052.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_18/8O4A8916.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_18/8O4A8917.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_18/8O4A8918.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_19/8O4A8991.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_19/8O4A8992.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_19/8O4A8993.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_19/8O4A8994.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_19/8O4A8995.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_2/8O4A8510.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_2/8O4A8511.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_2/8O4A8513.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_20/8O4A9081.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_20/8O4A9083.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_20/8O4A9086.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_20/8O4A9087.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_20/8O4A9088.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_21/8Y9A2351.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_21/8Y9A2352.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_21/8Y9A2353.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_22/8Y9A1666.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_22/8Y9A1667.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_22/8Y9A1668.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_22/8Y9A1669.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_23/8Y9A2142.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_23/8Y9A2143.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_23/8Y9A2144.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_24/0B8A4840.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_24/0B8A4841.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_24/0B8A4842.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_24/0B8A4843.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_24/0B8A4845.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_24/0B8A4846.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_25/0B8A5019.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_25/0B8A5020.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_25/0B8A5021.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_26/0B8A5380.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_26/0B8A5381.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_26/0B8A5382.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_27/8O4A9109.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_27/8O4A9110.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_27/8O4A9111.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_28/8O4A8559.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_28/8O4A8561.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_28/8O4A8562.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_29/8Y9A1659.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_29/8Y9A1660.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_29/8Y9A1661.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_29/8Y9A1662.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_29/8Y9A1663.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_29/8Y9A1664.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_29/8Y9A1665.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_3/8O4A9019.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_3/8O4A9020.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_3/8O4A9021.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_30/0B8A4668.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_30/0B8A4669.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_30/0B8A4670.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_30/0B8A4671.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_31/8O4A8612.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_31/8O4A8613.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_31/8O4A8614.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_31/8O4A8615.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_31/8O4A8616.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_31/8O4A8617.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_32/0B8A4662.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_32/0B8A4663.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_32/0B8A4664.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_32/0B8A4665.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_33/8O4A8996.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_33/8O4A8997.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_33/8O4A8998.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_34/8O4A8941.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_34/8O4A8942.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_34/8O4A8943.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_35/8O4A8984.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_35/8O4A8986.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_35/8O4A8987.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_35/8O4A8988.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_35/8O4A8989.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_35/8O4A8990.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_36/0B8A4924.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_36/0B8A4925.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_36/0B8A4926.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_37/0B8A5384.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_37/0B8A5385.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_37/0B8A5386.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_37/0B8A5387.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_38/8O4A9124.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_38/8O4A9125.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_38/8O4A9126.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_38/8O4A9127.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_38/8O4A9128.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_39/8O4A9092.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_39/8O4A9093.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_39/8O4A9095.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_4/8O4A8689.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_4/8O4A8690.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_4/8O4A8698.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_40/8Y9A2368.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_40/8Y9A2369.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_40/8Y9A2370.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_41/8Y9A2194.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_41/8Y9A2195.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_41/8Y9A2196.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_42/8Y9A1526.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_42/8Y9A1527.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_42/8Y9A1528.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_43/0B8A5390.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_43/0B8A5391.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_43/0B8A5393.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_44/8O4A8601.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_44/8O4A8602.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_44/8O4A8603.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_45/8O4A8589.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_45/8O4A8590.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_45/8O4A8591.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_46/0B8A4929.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_46/0B8A4930.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_46/0B8A4931.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_47/0B8A5333.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_47/0B8A5347.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_47/0B8A5348.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_47/0B8A5349.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_48/0B8A5360.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_48/0B8A5361.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_48/0B8A5362.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_49/8O4A9495.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_49/8O4A9498.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_49/8O4A9499.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_5/0B8A5294.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_5/0B8A5295.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_5/0B8A5296.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_5/0B8A5297.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_50/8O4A8970.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_50/8O4A8971.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_50/8O4A8972.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_50/8O4A8973.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_50/8O4A8974.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_50/8O4A8975.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_50/8O4A8976.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_50/8O4A8977.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_50/8O4A8978.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_51/8O4A8741.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_51/8O4A8742.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_51/8O4A8743.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_51/8O4A8745.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_52/0B8A4997.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_52/0B8A4998.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_52/0B8A4999.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_52/0B8A5000.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_52/0B8A5001.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_52/0B8A5002.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_52/0B8A5003.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_53/8O4A9060.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_53/8O4A9062.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_53/8O4A9063.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_53/8O4A9064.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_54/0B8A4685.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_54/0B8A4686.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_54/0B8A4687.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_55/8O4A9072.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_55/8O4A9074.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_55/8O4A9076.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_56/0B8A5372.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_56/0B8A5373.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_56/0B8A5374.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_57/0B8A4905.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_57/0B8A4913.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_57/0B8A4915.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_58/0B8A5400.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_58/0B8A5401.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_58/0B8A5402.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_59/8Y9A2216.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_59/8Y9A2218.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_59/8Y9A2224.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_6/0B8A4565.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_6/0B8A4566.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_6/0B8A4567.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_6/0B8A4575.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_6/0B8A4576.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_6/0B8A4590.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_6/0B8A4591.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_6/0B8A4592.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_60/0B8A6242.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_60/0B8A6243.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_60/0B8A6244.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_61/0B8A4551.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_61/0B8A4552.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_61/0B8A4553.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_61/0B8A4554.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_61/0B8A4555.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_61/0B8A4556.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_61/0B8A4557.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_61/0B8A4558.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_62/8Y9A2258.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_62/8Y9A2259.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_62/8Y9A2260.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_63/8O4A8531.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_63/8O4A8532.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_63/8O4A8533.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_64/8Y9A1544.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_64/8Y9A1545.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_64/8Y9A1546.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_65/0B8A5298.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_65/0B8A5299.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_65/0B8A5300.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_66/8Y9A1593.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_66/8Y9A1594.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_66/8Y9A1595.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_66/8Y9A1596.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_66/8Y9A1597.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_67/8O4A8899.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_67/8O4A8903.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_67/8O4A9041.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_68/0B8A5303.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_68/0B8A5304.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_68/0B8A5305.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_68/0B8A5307.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_68/0B8A5310.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_69/8Y9A1554.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_69/8Y9A1555.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_69/8Y9A1556.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_7/8Y9A1966.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_7/8Y9A1968.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_7/8Y9A1970.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_7/8Y9A1971.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_70/0B8A4568.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_70/0B8A4569.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_70/0B8A4570.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_71/8O4A9010.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_71/8O4A9011.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_71/8O4A9012.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_72/0B8A5098.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_72/0B8A5099.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_72/0B8A5100.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_8/0B8A4607.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_8/0B8A4608.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_8/0B8A4609.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_9/0B8A4383.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_9/0B8A4386.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/data_clustered/cluster_9/0B8A4389.JPG" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/model_clustering.py" afterPath="$PROJECT_DIR$/models/model_clustering.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,22 +292,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="features_extraction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features_extraction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Clustering.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Clustering.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_clustering.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/model_clustering.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="features_VGG16.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/features_VGG16.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-65">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_scoring.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/model_scoring.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,6 +364,9 @@
         <option value="$PROJECT_DIR$/features_extraction.py" />
         <option value="$PROJECT_DIR$/model_scoring.py" />
         <option value="$PROJECT_DIR$/model_clustering.py" />
+        <option value="$PROJECT_DIR$/models/clustering.py" />
+        <option value="$PROJECT_DIR$/models/features_VGG16.py" />
+        <option value="$PROJECT_DIR$/models/model_clustering.py" />
       </list>
     </option>
   </component>
@@ -73,6 +390,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -80,17 +399,20 @@
               <item name="project_data_track" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_data_track" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="project_data_track" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_data_track" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$USER_HOME$/anaconda3/bin/python3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="add_unversioned_files" value="true" />
   </component>
   <component name="RunDashboard">
@@ -105,8 +427,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jupyter Notebook.project_data_track">
-    <configuration name="project_data_track" type="Python.Ipnb" factoryName="Jupyter Notebook">
+  <component name="RunManager">
+    <configuration default="true" type="Python.Ipnb" factoryName="Jupyter Notebook">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -119,8 +441,52 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="project_data_track" />
       <option name="additionalOptions" value="" />
-      <option name="ipnbHost" value="127.0.0.1" />
-      <option name="ipnbPort" value="8888" />
+      <option name="ipnbHost" value="" />
+      <option name="ipnbPort" value="" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="project_data_track" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="project_data_track" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="project_data_track" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -148,14 +514,21 @@
       <option name="project" value="LOCAL" />
       <updated>1516543258876</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="DBSCAN - #1">
+      <created>1517936017970</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1517936017970</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26494345" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26898223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -225,6 +598,22 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_extraction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
@@ -260,13 +649,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Untitled.ipynb" />
-    <entry file="file://$PROJECT_DIR$/Clustering.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -294,6 +676,49 @@
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/model_scoring.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/features_VGG16.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/model_clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
