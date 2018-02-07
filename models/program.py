@@ -9,6 +9,6 @@ features.compute_features()
 features.dump(path_dest)
 
 my_model = m.model_clustering(210, 2)
-my_model.pickle_load(path_dest + + '/pic_list.pkl', path_dest + + '/features_list_VGG16.pkl')
+my_model.pickle_load(path_dest + '/pic_list.pkl', path_dest + '/features_list_VGG16.pkl')
 my_model.fit_predict()
 my_model.print_statistics()

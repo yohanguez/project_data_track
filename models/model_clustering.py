@@ -30,15 +30,14 @@ class model_clustering():
 
     def pickle_load(self, path1, path2): #path1= path/features_list_VGG16.pkl'
         with open(path1, 'rb') as f:
-            self.features_list = pickle.load(f)
-        with open(path2, 'rb') as f:
             self.pic_list = pickle.load(f)
-        self.nb_image = nb_image = len(self.pic_list)
-        self.nb_features = len(self.features_list[0])
+        with open(path2, 'rb') as f:
+            self.features_list = pickle.load(f)
+        self.nb_image = len(self.pic_list)
+        self.nb_features = self.features_list[0].shape[1]
 
     def fit_predict(self):
-        self.features_list = np.asarray(self.features_list).reshape(
-            self.nb_image, self.nb_features)
+        self.features_list = np.asarray(self.features_list).reshape(self.nb_image, self.nb_features)
         dist_eucl = pairwise_distances(self.features_list, metric="euclidean")
         self.model_DBSCAN = DBSCAN(eps=self.eps, min_samples=self.minpts)
         self.labels = self.model_DBSCAN.fit_predict(dist_eucl)
