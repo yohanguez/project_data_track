@@ -28,7 +28,7 @@ class features_VGG16():
             self.features_list.append(model.predict(x))
 
     def dump(self, path):
-        with open(path + '/pic_list.pkl', 'wb') as f:
+        with open(path + '/result/pic_list.pkl', 'wb') as f:
             pickle.dump(self.pic_list, f)
-        with open(path + '/features_list_VGG16.pkl', 'wb') as f:
+        with open(path + '/result/features_list_VGG16.pkl', 'wb') as f:
             pickle.dump(self.features_list, f)

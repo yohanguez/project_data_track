@@ -36,11 +36,13 @@ class model_clustering():
         self.nb_image = len(self.pic_list)
         self.nb_features = self.features_list[0].shape[1]
 
-    def fit_predict(self):
+    def fit_predict(self, path):
         self.features_list = np.asarray(self.features_list).reshape(self.nb_image, self.nb_features)
         dist_eucl = pairwise_distances(self.features_list, metric="euclidean")
         self.model_DBSCAN = DBSCAN(eps=self.eps, min_samples=self.minpts)
         self.labels = self.model_DBSCAN.fit_predict(dist_eucl)
+        with open(path + '/labels.pkl', 'wb') as f:
+            pickle.dump(self.pic_list, f)
 
     def compute_statistics(self):
         #statistics
@@ -70,7 +72,7 @@ class model_clustering():
 
 
     def create_folder_one(self, no_cluster, path):
-        path_name = path + '/cluster_' + str(no_cluster)
+        path_name = path + '/result/clusters/cluster_' + str(no_cluster)
         if not os.path.exists(path_name):
             os.makedirs(path_name)
         indice = np.argwhere(self.labels == no_cluster)
