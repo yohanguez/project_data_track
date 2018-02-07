@@ -15,8 +15,15 @@ from shutil import copyfile
 
 class model_clustering():
     def __init__(self, p_features_list, p_pic_list):
-        print('TODO')
-        pass
+        self.features_list = None
+        self.pic_list = None
+        self.model_DBSCAN = None
+        self.nb_image = None
+        self.labels = None
+        self.nb_clusters = None
+        self.nb_element_clustered = None
+        self.number_element_per_cluster = None
+        self.number_element_no_clusterized = None
 
 
     def pickle_load(self, path1, path2): #path1= path/features_list_VGG16.pkl'
@@ -26,10 +33,8 @@ class model_clustering():
         with open(path2, 'rb') as f:
             self.pic_list = pickle.load(f)
 
-
-    def fit_predict(self, eps, minPts):
-
-        self.model_DBSCAN = DBSCAN(eps=eps, min_samples=minPts)
+    def fit_predict(self, eps, minpts):
+        self.model_DBSCAN = DBSCAN(eps=eps, min_samples=minpts)
         self.labels = model_DBSCAN.fit_predict(dist_eucl)
 
     def compute_statistics(self):
@@ -39,7 +44,8 @@ class model_clustering():
                                                   else 0)
         self.nb_element_clustered = self.labels[self.labels != -1].shape[0]
         self.number_element_per_cluster = int(self.nb_element_clustered / self.nb_clusters)
-        self.number_element_no_clusterized = (self.labels==-1).sum()/self.nb_image
+        self.number_element_no_clusterized = (self.labels == -1).sum(
+                                                                )/self.nb_image
 
     def print_statistics(self):
         compute_statistics()
@@ -47,10 +53,12 @@ class model_clustering():
         print('% Number of element no clustered: ',(labels == -1).sum() / nb_image)
         print('# clusters:', nb_clusters)
         print('Average of number in cluster:', nb_element_clustered)
-        print('Average number of element per cluster:', number_element_per_cluster)
+        print('Average number of element per cluster:',
+              self.number_element_per_cluster)
 
     def plot_statitics(selfself):
-        labels_only_clustered = self.labels[self.labels != -1]
+        compute_statistics()
+        #labels_only_clustered = self.labels[self.labels != -1]
         f, axe = plt.subplots(1, 2, figsize=(30, 20))
         axe[0].hist(self.labels, bins=range(self.nb_clusters))
 

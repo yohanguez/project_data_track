@@ -3,6 +3,8 @@ from keras.applications.vgg16 import VGG16
 class features_VGG16():
     def __init__(self, p_path):
         self.path = p_path
+        self.pic_list = None
+        self.features_list = None
 
 
     def compute_features(self):
@@ -19,9 +21,8 @@ class features_VGG16():
             x = preprocess_input(x)
             self.features_list.append(model.predict(x))
 
-    def dump(self):
-        with open('pic_list.pkl', 'wb') as f:
+    def dump(self, path):
+        with open(path + '/pic_list.pkl', 'wb') as f:
             pickle.dump(self.pic_list, f)
-
-        with open('features_list_VGG16.pkl', 'wb') as f:
+        with open(path + '/features_list_VGG16.pkl', 'wb') as f:
             pickle.dump(self.features_list, f)
