@@ -14,7 +14,9 @@ from shutil import copyfile
 
 
 class model_clustering():
-    def __init__(self, p_features_list, p_pic_list):
+    def __init__(self, p_eps, p_minpts):
+        self.eps = p_eps
+        self.minpts = p_minpts
         self.features_list = None
         self.pic_list = None
         self.model_DBSCAN = None
@@ -29,17 +31,21 @@ class model_clustering():
     def pickle_load(self, path1, path2): #path1= path/features_list_VGG16.pkl'
         with open(path1, 'rb') as f:
             self.features_list = pickle.load(f)
-
         with open(path2, 'rb') as f:
             self.pic_list = pickle.load(f)
+        self.nb_image = nb_image = len(self.pic_list)
+        self.nb_features = len(self.features_list[0])
 
-    def fit_predict(self, eps, minpts):
-        self.model_DBSCAN = DBSCAN(eps=eps, min_samples=minpts)
-        self.labels = model_DBSCAN.fit_predict(dist_eucl)
+    def fit_predict(self):
+        self.features_list = np.asarray(self.features_list).reshape(
+            self.nb_image, self.nb_features)
+        dist_eucl = pairwise_distances(self.features_list, metric="euclidean")
+        self.model_DBSCAN = DBSCAN(eps=self.eps, min_samples=self.minpts)
+        self.labels = self.model_DBSCAN.fit_predict(dist_eucl)
 
     def compute_statistics(self):
         #statistics
-        self.nb_image = nb_image = len(pic_list)
+
         self.nb_clusters = len(set(self.labels)) - (1 if -1 in self.labels
                                                   else 0)
         self.nb_element_clustered = self.labels[self.labels != -1].shape[0]
@@ -48,16 +54,17 @@ class model_clustering():
                                                                 )/self.nb_image
 
     def print_statistics(self):
-        compute_statistics()
-        print('Value for eps', eps)
-        print('% Number of element no clustered: ',(labels == -1).sum() / nb_image)
-        print('# clusters:', nb_clusters)
-        print('Average of number in cluster:', nb_element_clustered)
+        self.compute_statistics()
+        print('Value for eps', self.eps)
+        print('% Number of element no clustered: ',(self.labels == -1).sum() /
+              self.nb_image)
+        print('# clusters:', self.nb_clusters)
+        print('Average of number in cluster:', self.nb_element_clustered)
         print('Average number of element per cluster:',
               self.number_element_per_cluster)
 
-    def plot_statitics(selfself):
-        compute_statistics()
+    def plot_statitics(self):
+        self.compute_statistics()
         #labels_only_clustered = self.labels[self.labels != -1]
         f, axe = plt.subplots(1, 2, figsize=(30, 20))
         axe[0].hist(self.labels, bins=range(self.nb_clusters))
@@ -78,5 +85,5 @@ class model_clustering():
 
     def create_folder_all(self, path):
         for no_cluster in range(self.nb_clusters):
-            create_folder_one(no_cluster, path)
+            self.create_folder_one(no_cluster, path)
 

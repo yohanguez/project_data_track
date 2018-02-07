@@ -1,10 +1,16 @@
 from keras.applications.vgg16 import VGG16
+from keras.models import Model
+import glob
+import pickle
+from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
+import numpy as np
+from keras.applications.imagenet_utils import  preprocess_input
 
 class features_VGG16():
     def __init__(self, p_path):
         self.path = p_path
         self.pic_list = None
-        self.features_list = None
+        self.features_list = []
 
 
     def compute_features(self):
@@ -14,7 +20,7 @@ class features_VGG16():
         model = Model(inp, out)
 
         self.pic_list = glob.glob(self.path + '/*.JPG')
-        for pic_path in pic_list:
+        for pic_path in self.pic_list:
             img = load_img(pic_path, target_size=(224, 224))
             x = img_to_array(img)
             x = np.expand_dims(x, axis=0)
