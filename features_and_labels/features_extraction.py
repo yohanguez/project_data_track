@@ -7,6 +7,7 @@ import numpy as np
 import math
 import pandas as pd
 from sklearn import preprocessing
+import os
 import sys
 def people(filename, detector, predictor):
     image = cv2.imread(filename)
@@ -219,7 +220,11 @@ class Feature_Extractor_Scoring():
     def Extractor(self):
         self.N_FEATURES = 20
         self.detector = dlib.get_frontal_face_detector()
-        self.predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+
+        main_path = os.path.abspath(os.curdir)
+        main_path = main_path[:main_path.rfind("scoring") + len("scoring")]
+        path_predictor = main_path + '/features_and_labels/shape_predictor_68_face_landmarks.dat'
+        self.predictor = dlib.shape_predictor(path_predictor)
         self.features = np.zeros((len(self.list_files), self.N_FEATURES))
         for i, filename in enumerate(self.list_files):
             self.features[i, :] = feature_matrix(filename,  self.detector, self.predictor, self.weight_head)
@@ -269,7 +274,6 @@ def to_X_y(merge):
     yy = y_df.copy()
 
     return XX, yy
-
 
 
 
