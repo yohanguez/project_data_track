@@ -42,7 +42,7 @@ class model_clustering():
         self.model_DBSCAN = DBSCAN(eps=self.eps, min_samples=self.minpts)
         self.labels = self.model_DBSCAN.fit_predict(dist_eucl)
         with open(path + '/labels.pkl', 'wb') as f:
-            pickle.dump(self.pic_list, f)
+            pickle.dump(self.labels, f)
 
     def compute_statistics(self):
         #statistics
